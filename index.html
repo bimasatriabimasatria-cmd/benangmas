@@ -373,7 +373,11 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active'); // Menambahkan class 'active' jika terlihat
+                    // Jika elemen masuk ke layar, tambahkan class 'active' (munculkan)
+                    entry.target.classList.add('active'); 
+                } else {
+                    // JIKA ELEMEN KELUAR DARI LAYAR, HAPUS CLASS 'ACTIVE' (SEMBUNYIKAN LAGI)
+                    entry.target.classList.remove('active');
                 }
             });
         });
