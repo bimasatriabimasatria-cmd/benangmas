@@ -1,0 +1,6 @@
+# Mengabaikan 1 file spesifik
+hostinger-recovery-codes.txt
+gitignore/hostinger-recovery-codes.txt
+
+# Mengabaikan 1 folder beserta seluruh isinya
+gitignore/
