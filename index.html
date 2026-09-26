@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Pastikan file logo Anda sudah benar lokasinya -->
     <link rel="icon" type="image/png" href="gambar/logo/logo.png">
     <title>PT. BENANG MAS WILLTEX - Pabrik Tekstil & Benang Kualitas Ekspor</title>
     <meta name="description" content="PT. Benang Mas Willtex adalah produsen dan pabrik tekstil terkemuka di Indonesia yang memproduksi benang katun pure white, rajutan polyester, dan campuran serat khusus berkualitas ekspor.">
     <meta name="keywords" content="pabrik tekstil karawang, produsen benang cotton, benang katun putih, kain polyester, industri tekstil indonesia, pt benang mas, bmwillmex">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         /* === PENGATURAN DASAR === */
         :root {
-            /* TEMA TEKSTIL: Indigo Dye, Emas Benang, & Raw Cotton */
-            --primary-color: #1a2b4c; /* Biru Indigo Gelap */
-            --secondary-color: #d4af37; /* Emas Klasik (Benang Mas) */
+            --primary-color: #1a2b4c; 
+            --secondary-color: #d4af37; 
             --text-color: #333333;
             --text-light: #555555;
-            --bg-cotton: #fdfbf7; /* Warna Putih Tulang / Kapas Mentah */
+            --bg-cotton: #fdfbf7; 
             --border-stitch: 1px dashed var(--secondary-color);
         }
 
@@ -32,15 +32,14 @@
         body {
             color: var(--text-color);
             line-height: 1.7;
-            font-family: 'Poppins', sans-serif; /* Font modern untuk teks */
+            font-family: 'Poppins', sans-serif; 
             background-color: var(--bg-cotton);
-            /* Pola titik halus menyerupai serat kain (opsional) */
             background-image: radial-gradient(#e5e0d8 1px, transparent 1px);
             background-size: 20px 20px;
         }
 
         h1, h2, h3, h4, .logo-text {
-            font-family: 'Playfair Display', serif; /* Font elegan untuk heading */
+            font-family: 'Playfair Display', serif; 
         }
 
         /* === BAGIAN HEADER & NAVIGASI === */
@@ -55,7 +54,6 @@
             z-index: 1000;
         }
 
-        /* Detail border menyerupai jahitan di bawah header */
         header::after {
             content: '';
             position: absolute;
@@ -111,7 +109,6 @@
             position: relative;
         }
 
-        /* Animasi garis bawah seperti benang yang ditarik */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -133,8 +130,7 @@
 
         /* === BAGIAN HERO (BANNER UTAMA) === */
         .hero {
-            /* Background gradien dipadukan dengan tekstur kain/denim dari unsplash */
-            background: linear-gradient(135deg, rgba(26, 43, 76, 0.92), rgba(26, 43, 76, 0.95)), url('https://www.bigwes.com/images/blog/ten-iconic-symbols.webp') center/cover;
+            background: linear-gradient(135deg, rgba(26, 43, 76, 0.92), rgba(26, 43, 76, 0.95)), url('gambar/hero-bg.jpg') center/cover;
             color: white;
             padding: 180px 5% 120px;
             text-align: center;
@@ -157,7 +153,6 @@
             font-weight: 300;
         }
 
-        /* Desain Tombol ala Label Kain */
         .btn {
             display: inline-block;
             background-color: var(--secondary-color);
@@ -171,7 +166,6 @@
             position: relative;
             transition: all 0.3s;
             border: none;
-            /* Efek jahitan dalam */
             outline: 1px dashed rgba(26, 43, 76, 0.5);
             outline-offset: -6px;
         }
@@ -182,7 +176,6 @@
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
 
-        /* TOMBOL UNDUH E-KATALOG === */
         .btn-download {
             display: inline-flex;
             align-items: center;
@@ -230,7 +223,6 @@
             transform: translateX(-50%);
         }
 
-        /* Ornamen garis & gunting/benang di bawah judul */
         .section-title::after {
             content: '';
             position: absolute;
@@ -261,7 +253,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
-        /* Ornamen jahitan di luar gambar */
         .about-image::before {
             content: '';
             position: absolute;
@@ -289,6 +280,101 @@
             margin-bottom: 20px;
         }
 
+        /* === BAGIAN PROSES PRODUKSI === */
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 0;
+            padding: 0 5%;
+        }
+
+        .process-card {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .process-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .process-card p {
+            color: var(--primary-color);
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* === BAGIAN TEKNOLOGI MESIN (BARU) === */
+        .machine-section {
+            background-color: var(--primary-color);
+            /* Tekstur dot putih tipis untuk bg biru */
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            padding-bottom: 120px;
+        }
+
+        .machine-section .section-title {
+            color: white; /* Mengubah warna judul menjadi putih agar kontras */
+        }
+
+        .machine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .machine-card {
+            background-color: white;
+            border: 1px solid var(--secondary-color);
+            padding: 10px;
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .machine-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .machine-img-wrapper {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .machine-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .machine-card:hover .machine-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .machine-info {
+            padding: 20px 10px 10px;
+            text-align: center;
+        }
+
+        .machine-info h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .machine-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
         /* === BAGIAN PRODUK (KARTU KAIN/BENANG) === */
         .services {
             background-color: white;
@@ -308,7 +394,6 @@
             text-align: center;
             transition: transform 0.4s ease;
             position: relative;
-            /* Tampilan Label/Swatch Kain */
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             border: 1px solid #e2ddc8;
         }
@@ -354,7 +439,7 @@
             cursor: crosshair;
         }
 
-        /* === REVISI: SECTION GALERI TAMBAHAN === */
+        /* === SECTION GALERI === */
         .gallery {
             background-color: white;
             padding-bottom: 120px;
@@ -463,7 +548,7 @@
             font-family: 'Playfair Display', serif;
             font-weight: bold;
             color: var(--primary-color);
-            box-shadow: 3px 3px 0 var(--secondary-color); /* Efek offset shadow */
+            box-shadow: 3px 3px 0 var(--secondary-color);
         }
 
         .logo-box img {
@@ -488,7 +573,6 @@
             position: relative;
         }
         
-        /* Pita dekorasi kotak kontak */
         .contact-content::before {
             content: '';
             position: absolute;
@@ -531,7 +615,7 @@
             font-size: 0.9rem;
         }
 
-        /* === MENU HAMBURGER (RESPONSIVE) === */
+        /* === MENU HAMBURGER & RESPONSIVE WIDGETS === */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -566,9 +650,38 @@
 
             .nav-links.active { left: 0; }
             .btn-download { margin-left: 0; margin-top: 15px; display: flex; justify-content: center; }
+            
+            .whatsapp-float {
+                width: 45px !important;
+                height: 45px !important;
+                bottom: 20px !important;
+                right: 20px !important;
+            }
+            .whatsapp-icon {
+                width: 25px !important;
+                height: 25px !important;
+            }
+            .ai-chat-widget {
+                bottom: 75px !important; 
+                right: 20px !important;
+            }
+            .ai-chat-btn {
+                width: 45px !important;
+                height: 45px !important;
+            }
+            .ai-chat-btn svg {
+                width: 20px !important;
+                height: 20px !important;
+            }
+            .ai-chat-window {
+                width: 300px !important;
+                height: 400px !important;
+                bottom: 55px !important;
+                right: 0 !important;
+            }
         }
 
-        /* === WHATSAPP WIDGET & AI CHAT (Disesuaikan Temanya) === */
+        /* === WHATSAPP WIDGET & AI CHAT === */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -741,18 +854,17 @@
             transform: translateY(0); 
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-
     </style>
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo-wrapper">
+            <a href="#beranda" class="logo-wrapper">
                 <img src="gambar/logo/logo.png" class="logo-img" alt="PT. Benang Mas Willtex Logo">
                 <span class="logo-text">BENANG MAS WILLTEX</span>
             </a>
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Buka menu navigasi" role="button" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -760,9 +872,11 @@
             <ul class="nav-links">
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#proses">Proses</a></li> <!-- Link baru -->
+                <li><a href="#proses">Proses</a></li>
+                <!-- TAUTAN MENU BARU -->
+                <li><a href="#mesin">Mesin</a></li>
                 <li><a href="#produk">Katalog</a></li>
-                <li><a href="#galeri">Galeri</a></li> <!-- Link baru -->
+                <li><a href="#galeri">Galeri</a></li>
                 <li><a href="#kontak">Kontak</a></li>
                 <li><a href="en.html" style="color: var(--secondary-color); font-weight: 700;">EN</a></li>
             </ul>
@@ -787,8 +901,7 @@
         <h2 class="section-title">Dedikasi Pada Kualitas</h2>
         <div class="about-content">
             <div class="about-image">
-                <!-- Gunakan gambar produksi utama yang masif -->
-                <img src="gambar/produk/benang.png" class="about-img" alt="Lini Produksi Modern PT Benang Mas Willtex">
+                <img src="gambar/produk/benang.png" class="about-img" alt="Lini Produksi Modern PT Benang Mas Willtex" loading="lazy">
             </div>
             <div class="about-text">
                 <h3>Warisan Tekstil Sejak 2005</h3>
@@ -799,45 +912,78 @@
         </div>
     </section>
 
-    <!-- === REVISI: BAGIAN PROSES PRODUKSI BARU === -->
-    <section id="proses" class="section marquee-section reveal">
+    <section id="proses" class="section reveal">
         <h2 class="section-title">Kapasitas Produksi</h2>
-        <div class="gallery-grid" style="grid-template-columns: 1fr; margin-top: 0; padding: 0 5%;">
-            <div style="background: white; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-                <!-- Gambar ini menunjukkan skala besar dan kerapian gudang -->
-                <img src="gambar/produk/kain.png" alt="Fasilitas Pergudangan Rol Kain BMW" style="width: 100%; height: auto; object-fit: cover;">
-                <p style="color: var(--primary-color); margin-top: 15px; text-align: center; font-weight: 500;">Fasilitas pergudangan dan logistik modern untuk menjamin ketersediaan *buffer stock* pesanan volume besar secara berkelanjutan.</p>
+        <div class="process-grid">
+            <div class="process-card">
+                <img src="gambar/produk/kain.png" alt="Fasilitas Pergudangan Rol Kain BMW" loading="lazy">
+                <p>Fasilitas pergudangan dan logistik modern untuk menjamin ketersediaan *buffer stock* pesanan volume besar secara berkelanjutan.</p>
             </div>
         </div>
     </section>
 
+    <!-- === SECTION BARU: FASILITAS MESIN === -->
+    <section id="mesin" class="section machine-section reveal">
+        <h2 class="section-title">Teknologi & Fasilitas Pabrik</h2>
+        <div class="machine-grid">
+            <!-- Mesin 1 -->
+            <div class="machine-card reveal">
+                <div class="machine-img-wrapper">
+                    <img src="gambar/mesin/sintelli.jpeg" alt="Mesin Spinning Presisi Tinggi" loading="lazy">
+                </div>
+                <div class="machine-info">
+                    <h3>High-Speed Spinning</h3>
+                    <p>Mesin pemintal otomatis berkecepatan tinggi yang menjamin konsistensi ketebalan benang (count) dan meminimalisir *neps* pada serat kapas murni.</p>
+                </div>
+            </div>
+            
+            <!-- Mesin 2 -->
+            <div class="machine-card reveal">
+                <div class="machine-img-wrapper">
+                    <img src="gambar/mesin/jgt1000.jpeg" alt="Mesin Tenun Otomatis" loading="lazy">
+                </div>
+                <div class="machine-info">
+                    <h3>Precision Weaving Loom</h3>
+                    <p>Fasilitas tenun dan rajut (knitting) terkomputerisasi yang dioptimalkan untuk kain polyester struktural tanpa cacat lusi dan pakan.</p>
+                </div>
+            </div>
+            
+            <!-- Mesin 3 -->
+            <div class="machine-card reveal">
+                <div class="machine-img-wrapper">
+                    <img src="gambar/mesin/xinda.jpeg" alt="Fasilitas Quality Control" loading="lazy">
+                </div>
+                <div class="machine-info">
+                    <h3>Automated QC & Testing</h3>
+                    <p>Laboratorium in-house untuk menguji kekuatan tarik (tensile strength), keseragaman warna putih, serta ketahanan serat pada setiap batch produksi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- === AKHIR SECTION BARU === -->
+
     <section id="produk" class="section services reveal">
         <h2 class="section-title">Katalog Premium</h2>
         <div class="grid-cards">
-            <!-- PRODUK 1: MENGGUNAKAN GAMBAR KURASI image_10.png -->
             <div class="card reveal">
                 <div class="img-zoom-container">
-                    <img src="gambar/produk/WhatsApp Image 2026-07-19 at 10.30.12.jpeg" alt="Benang Katun Pure White Rapi" class="zoom-img">
+                    <img src="gambar/produk/WhatsApp Image 2026-07-19 at 10.30.12.jpeg" alt="Benang Katun Pure White Rapi" class="zoom-img" loading="lazy">
                 </div>
                 <h3>Spin Cotton Yarn - Pure White</h3>
                 <p>Diproduksi dari serat kapas pilihan melalui proses *spinning* presisi tinggi. Memberikan kelembutan ekstra, warna putih cemerlang yang konsisten, daya serap optimal, serta kekuatan tarik tinggi untuk kebutuhan konveksi premium.</p>
             </div>
             
-            <!-- PRODUK 2: DESKRIPSI DISESUAIKAN DENGAN VISUAL BENANG PUTIH -->
             <div class="card reveal">
                 <div class="img-zoom-container">
-                    <!-- Gunakan stok foto yang lebih representatif untuk polyester -->
-                    <img src="gambar/produk/kain.png" alt="Kain Rajutan Polyester" class="zoom-img">
+                    <img src="gambar/produk/kain.png" alt="Kain Rajutan Polyester" class="zoom-img" loading="lazy">
                 </div>
                 <h3>Industrial Polyester Fabric</h3>
                 <p>Kain rajutan struktural berkualitas tinggi yang anti-kusut, tangguh, dan cepat kering. Solusi sempurna untuk kebutuhan *sportswear*, jaket *outdoor*, dan seragam industri yang membutuhkan durabilitas tinggi.</p>
             </div>
             
-            <!-- PRODUK 3: FOKUS PADA PRODUKSI KUSTOM BENANG -->
             <div class="card reveal">
                 <div class="img-zoom-container">
-                    <!-- Gunakan stok foto pewarnaan -->
-                    <img src="gambar/produk/benang2.jpg" alt="Proses Pewarnaan Benang" class="zoom-img">
+                    <img src="gambar/produk/benang2.jpg" alt="Proses Pewarnaan Benang" class="zoom-img" loading="lazy">
                 </div>
                 <h3>Custom Yarn Blending</h3>
                 <p>Kami menerima pesanan maklon untuk formulasi benang spesifik, termasuk campuran serat khusus dan penyesuaian GSM (ketebalan) dan kekuatan tarik, sesuai dengan instruksi teknis produksi Anda.</p>
@@ -845,23 +991,19 @@
         </div>
     </section>
 
-    <!-- === REVISI: BAGIAN GALERI TAMBAHAN === -->
     <section id="galeri" class="section gallery reveal">
         <h2 class="section-title">Detail Kualitas</h2>
         <div class="gallery-grid">
-            <!-- ITEM GALERI 1: MENGGUNAKAN GAMBAR image_15.png -->
             <div class="gallery-item reveal">
-                <img src="gambar/produk/txtr.jpg" alt="Close-up Serat Benang Pure White" class="gallery-img">
+                <img src="gambar/produk/txtr.jpg" alt="Close-up Serat Benang Pure White" class="gallery-img" loading="lazy">
                 <h4>Tekstur Serat Presisi</h4>
             </div>
-            <!-- ITEM GALERI 2: MENGGUNAKAN GAMBAR image_14.png -->
             <div class="gallery-item reveal">
-                <img src="gambar/produk/benang.jpg" alt="Kualitas Gulungan Benang BMW" class="gallery-img">
+                <img src="gambar/produk/benang.jpg" alt="Kualitas Gulungan Benang BMW" class="gallery-img" loading="lazy">
                 <h4>Kerapian Gulungan</h4>
             </div>
-            <!-- ITEM GALERI 3: MENGGUNAKAN GAMBAR image_12.png -->
             <div class="gallery-item reveal">
-                <img src="gambar/produk/WhatsApp Image 2026-07-19 at 10.30.19 (1).jpeg" alt="Batch Benang Batch Produksi Rapi" class="gallery-img">
+                <img src="gambar/produk/WhatsApp Image 2026-07-19 at 10.30.19 (1).jpeg" alt="Batch Benang Batch Produksi Rapi" class="gallery-img" loading="lazy">
                 <h4>Batch Produksi Rapi</h4>
             </div>
         </div>
@@ -913,16 +1055,14 @@
         <p>&copy; 2026 PT. BENANG MAS WILLTEX. Dirajut untuk masa depan.</p>
     </footer>
 
-    <!-- WHATSAPP FLOATING BUTTON === -->
-    <a href="https://wa.me/6282227776077?text=Halo%20sales%20BMW,%20saya%20tertarik%20dengan%20produk%20benang/kain%20Anda." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/6282227776077?text=Halo%20sales%20BMW,%20saya%20tertarik%20dengan%20produk%20benang/kain%20Anda." class="whatsapp-float" aria-label="Chat via WhatsApp" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.05 2.05c-7.7 0-14 6.3-14 14 0 2.45.65 4.8 1.85 6.95L2 30l7.2-1.9c2.05 1.1 4.35 1.7 6.8 1.7 7.7 0 14-6.3 14-14s-6.3-14-13.95-14zm0 25.65c-2.1 0-4.15-.55-5.95-1.6l-.4-.25-4.4 1.15 1.2-4.3-.25-.45c-1.15-1.85-1.75-4-1.75-6.2 0-6.35 5.15-11.5 11.5-11.5s11.5 5.15 11.5 11.5-5.15 11.5-11.5 11.5zm6.3-8.6c-.35-.15-2.05-1-2.35-1.1-.3-.1-.5-.15-.7.15s-.9 1.1-1.1 1.35c-.2.25-.4.25-.75.1-2.1-1-3.65-2.4-5.1-4.65-.2-.3-.05-.45.1-.6.15-.15.35-.4.5-.6.15-.2.2-.35.3-.55.1-.2.05-.4-.05-.55-.1-.15-.7-1.7-1-2.35-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.5.05-.75.35-.25.3-1 1-1 2.45s1.05 2.85 1.2 3.05c.15.2 2.05 3.15 5 4.4 1.85.8 2.6.9 3.55.75 1-.15 2.05-.85 2.35-1.65.3-.85.3-1.6.2-1.75-.1-.15-.3-.25-.65-.4z"/>
         </svg>
     </a>
 
-    <!-- AI CHATBOT WIDGET === -->
     <div class="ai-chat-widget">
-        <div class="ai-chat-btn" id="ai-chat-toggle">
+        <div class="ai-chat-btn" id="ai-chat-toggle" aria-label="Buka Chat Asisten AI" role="button" tabindex="0">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
@@ -931,7 +1071,7 @@
         <div class="ai-chat-window" id="ai-chat-window">
             <div class="ai-chat-header">
                 <h4>Assistant BMW</h4>
-                <span class="ai-chat-close" id="ai-chat-close">&times;</span>
+                <span class="ai-chat-close" id="ai-chat-close" aria-label="Tutup Chat" role="button">&times;</span>
             </div>
             <div class="ai-chat-messages" id="ai-chat-messages">
                 <div class="msg bot">
@@ -966,7 +1106,14 @@
         // Mobile Menu
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.querySelector('.nav-links');
+        
         mobileMenu.addEventListener('click', () => navMenu.classList.toggle('active'));
+        
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        });
         document.querySelectorAll('.nav-links a').forEach(item => {
             item.addEventListener('click', () => navMenu.classList.remove('active'));
         });
@@ -1007,7 +1154,9 @@
         function appendMessage(text, sender) {
             const msgDiv = document.createElement('div');
             msgDiv.classList.add('msg', sender);
-            msgDiv.innerHTML = text;
+            
+            msgDiv.textContent = text;
+            
             const messagesArea = document.getElementById('ai-chat-messages');
             messagesArea.appendChild(msgDiv);
             messagesArea.scrollTop = messagesArea.scrollHeight;
