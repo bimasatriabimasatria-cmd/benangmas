@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.benangmas.co.id/sitemap.xml
