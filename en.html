@@ -72,6 +72,7 @@
             padding: 15px 5%;
             max-width: 1200px;
             margin: 0 auto;
+            gap: 30px; /* TAMBAHAN: Memaksa jarak minimal 30px antara logo dan menu */
         }
 
         .logo-wrapper {
@@ -79,6 +80,7 @@
             align-items: center;
             gap: 12px;
             text-decoration: none;
+            flex-shrink: 0; /* TAMBAHAN: Mencegah area logo tertekan/mengecil */
         }
 
         .logo-img {
@@ -97,14 +99,14 @@
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 15px; /* UBAH: Dikecilkan dari 25px agar menu tidak terlalu memakan tempat */
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--primary-color);
-            font-weight: 500;
-            font-size: 0.95rem;
+            font-weight: 600; /* TAMBAHAN: Ditebalkan sedikit agar tetap terbaca jelas */
+            font-size: 0.85rem; /* UBAH: Dikecilkan dari 0.95rem */
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
@@ -855,7 +857,102 @@
             transform: translateY(0); 
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
+
+        /* === BAGIAN FAQ === */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            border: 1px solid #eaeaea;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: var(--bg-cotton);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: transform 0.3s ease;
+            line-height: 1;
+        }
+
+        .faq-item.active {
+            border-color: var(--secondary-color);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background-color: white;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            border-top: 1px dashed transparent;
+        }
+
+        .faq-item.active .faq-answer p {
+            border-top-color: #eaeaea;
+            padding-top: 20px;
+        }
     </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PT. Benang Mas Willtex",
+        "alternateName": "BMW Tekstil",
+        "url": "https://benangmas.co.id",
+        "logo": "https://benangmas.co.id/favicon.png",
+        "description": "PT. Benang Mas Willtex (BMW) adalah pabrik manufaktur tekstil berskala nasional di Karawang yang memproduksi benang katun pure white dan kain rajutan polyester.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "JL. Purwasari Cikampek No. 75, KP. Warung Kebon",
+            "addressLocality": "Karawang",
+            "addressRegion": "Jawa Barat",
+            "postalCode": "41377",
+            "addressCountry": "ID"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-822-2777-6077",
+            "contactType": "sales"
+        }
+    }
+    </script>
 </head>
 <body>
 
@@ -1027,6 +1124,32 @@
         </div>
     </section>
 
+    <section id="faq" class="section reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">What is PT Benang Mas Willtex (BMW)? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>PT. Benang Mas Willtex, officially abbreviated as <strong>BMW</strong>, is a national-scale textile manufacturer and factory in Karawang, Indonesia. We focus strictly on the textile industry, such as pure white cotton yarn and polyester knitting, and are <strong>not</strong> affiliated with any automotive brand or fashion shows.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What is the Minimum Order Quantity (MOQ)? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>For industrial-scale custom production, our standard MOQ starts from 100 rolls/bales. However, we also provide ready-to-ship buffer stock for pure white yarn in certain volumes. Please contact our sales team for details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you ship outside West Java? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Yes, our logistics facility handles the distribution of textile and yarn products throughout Indonesia as well as for global export needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="kontak" class="section reveal">
         <h2 class="section-title">Let's Partner With Us</h2>
         <div class="contact-content">
@@ -1177,6 +1300,33 @@
             if (text.includes('price') || text.includes('pricelist') || text.includes('quotation')) return "B2B pricing is highly dependent on order volume and technical specifications (GSM, Tensile Strength). Please click our WhatsApp sales icon for an official quotation.";
             return "Your inquiry has been recorded. Our technical sales team is ready to help discuss the specific pure white fabric specifications you need via WhatsApp.";
         }
+
+        
+    // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const faqAnswer = button.nextElementSibling;
+                
+                // Menutup FAQ lain yang sedang terbuka
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+
+                // Buka/Tutup FAQ yang diklik
+                faqItem.classList.toggle('active');
+                if (faqItem.classList.contains('active')) {
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+                } else {
+                    faqAnswer.style.maxHeight = null;
+                }
+            });
+        });
+       
     </script>
+ 
 </body>
 </html>
